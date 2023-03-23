@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="helloWorld">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <script src="angular.js"></script>
+    <script>
+        angular.module("helloWorld", []); // cria um módulo
+        // abaixo localiza um módulo controller e a declaração do $scope injetado como dependencia dentro do controller
+        angular.module("helloWorld").controller ("helloWorldCtrl", function ($scope){
+            $scope.message = "Hello Worldddd!";
+        });
+    </script>
+</head>
+<body>
+    <!-- a view do Angular são as tag HTML-->
+    <div ng-controller="helloWorldCtrl">
+        {{message}}
+    </div>
+    
+</body>
+</html>
